@@ -35,7 +35,7 @@ def date_precise():
     mois_jour = mois_range.day.values
     mois_jour[debut_date_precise.day < mois_jour] = debut_date_precise.day
     c_date_precise = pd.to_datetime(mois_range.year*10000+mois_range.month*100+mois_jour, format='%Y%m%d')
-    print(c_date_precise.replace(hour=0))
+    print(c_date_precise)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--feries', action='store_true', help='Pour avoir les jours féries configurés')
